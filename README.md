@@ -32,7 +32,7 @@ Go to the application settings > integrations > OAuth2 Authentication.
 
 ### 1) Create a new application on the OAuth2 provider
 
-Go to the third-party authentication provider and add a new application. 
+Go to the third-party authentication provider and add a new application.
 Copy and paste the **Kanboard callback URL** and generate a new set of tokens.
 
 The third-party provider will returns a **Client ID** and a **Client Secret**.
@@ -83,3 +83,10 @@ Example for Discord:
 - **Name Key**: `username`
 - **Email Key**: `email`
 - **User ID Key**: `id`
+
+Logout
+--------
+To enable logout you have to edit app/ServiceProvider/RouteProvider.php file and comment out following line:
+```
+$container['route']->addRoute('logout', 'AuthController', 'logout');
+```
