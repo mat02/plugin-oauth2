@@ -215,4 +215,15 @@ class GenericOAuth2Provider extends Base implements OAuthAuthenticationProviderI
     {
         return $this->configModel->get('oauth2_user_api_url');
     }
+
+    /**
+     * Get Logout url
+     *
+     * @access public
+     * @return string
+     */
+    public function getLogoutUrl()
+    {
+        return $this->configModel->get('oauth2_logout_url');
+    }
 }

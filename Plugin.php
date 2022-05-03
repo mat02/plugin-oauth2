@@ -15,6 +15,7 @@ class Plugin extends Base
         $this->applicationAccessMap->add('OAuthController', 'handler', Role::APP_PUBLIC);
 
         $this->route->addRoute('/oauth/callback', 'OAuthController', 'handler', 'OAuth2');
+        $this->route->addRoute('/logout', 'OAuthController', 'logout', 'OAuth2');
 
         $this->template->hook->attach('template:auth:login-form:after', 'OAuth2:auth/login', [
             'oauth2_custom_login_text' => $this->configModel->get('oauth2_custom_login_text'),

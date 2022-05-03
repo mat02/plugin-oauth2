@@ -15,6 +15,9 @@
     <?= $this->form->label(t('Token URL'), 'oauth2_token_url') ?>
     <?= $this->form->text('oauth2_token_url', $values) ?>
 
+    <?= $this->form->label(t('Logout URL'), 'oauth2_logout_url') ?>
+    <?= $this->form->text('oauth2_logout_url', $values) ?>
+
     <?= $this->form->label(t('User API URL'), 'oauth2_user_api_url') ?>
     <?= $this->form->text('oauth2_user_api_url', $values) ?>
 

@@ -21,4 +21,15 @@ class OAuthController extends BaseOAuthController
     {
         $this->step1('OAuth2');
     }
+
+    /**
+     * Handle logout
+     *
+     * @access public
+     */
+    public function logout()
+    {
+        $this->sessionManager->close();
+        $this->response->redirect($this->authenticationManager->getProvider('OAuth2')->getLogoutUrl());
+    }
 }
