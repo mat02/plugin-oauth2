@@ -90,3 +90,8 @@ To enable logout you have to edit app/ServiceProvider/RouteProvider.php file and
 ```
 $container['route']->addRoute('logout', 'AuthController', 'logout');
 ```
+
+and add to config.php follwoing line:
+```
+define('DISABLE_LOGOUT', true);
+```
